@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lista de Tarefas</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+		ul {
+			padding: 0;
+			list-style: none;
+		}
+		li {
+			padding: 5px;
+			margin-bottom: 5px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+		input[type="text"] {
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			margin-right: 5px;
+		}
+		input[type="submit"] {
+			padding: 5px 10px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>Lista de Tarefas</h1>
+	<p>Adicione uma nova tarefa:</p>
+	<form>
+		<input type="text" id="novaTarefa">
+		<input type="submit" value="Adicionar">
+	</form>
+	<h2>Tarefas:</h2>
+	<ul id="listaTarefas">
+		<li>Fazer compras</li>
+		<li>Limpar a casa</li>
+		<li>Ir ao médico</li>
+	</ul>
+
+	<script>
+		// Seleciona o formulário e o campo de entrada
+		var form = document.querySelector("form");
+		var novaTarefaInput = document.querySelector("#novaTarefa");
+
+		// Adiciona um evento de envio ao formulário
+		form.addEventListener("submit", function(event) {
+			event.preventDefault(); // Evita o envio do formulário
+			var novaTarefa = novaTarefaInput.value;
+			if (novaTarefa.trim()) { // Verifica se a entrada não está vazia
+				var novaTarefaLi = document.createElement("li"); // Cria um novo elemento <li>
+				novaTarefaLi.textContent = novaTarefa; // Define o texto do novo elemento
+				document.querySelector("#listaTarefas").appendChild(novaTarefaLi); // Adiciona o novo elemento à lista
+				novaTarefaInput.value = ""; // Limpa o campo de entrada
+			}
+		});
+	</script>
+</body>
+</html>
