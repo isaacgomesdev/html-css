@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabelas</title>
     <style>
+        
+        html, body{
+            background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(49, 49, 49));
+            height: 100%;
+        }
+
         h1{
-            background-image: linear-gradient(to right, rgb(0, 80, 172), rgb(157, 255, 0), rgb(20, 172, 0));
+            text-align: center;
+            background-image: linear-gradient(to bottom, rgb(0, 80, 172), rgb(157, 255, 0), rgb(20, 172, 0));
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -19,6 +26,7 @@
             height: 300px;
             border-collapse: collapse;
             border: 8px solid rgb(20, 172, 0);
+            margin: auto;
         }
         td{
             border: 3px solid yellow;
@@ -46,22 +54,34 @@
     -->
 
     <table>
+
+        <caption>TABELA</caption>
+
+        <th scope="col"></th>
+        <th scope="col">A</th>
+        <th scope="col">B</th>
+        <th scope="col">C</th>
+
         <tr>
+            <th scope="row">1</th>
             <td>A1</td>
             <td>B1</td>
             <td>C1</td>
         </tr>
         <tr>
+            <th scope="row">2</th>
             <td>A2</td>
             <td>B2</td>
             <td>C2</td>
         </tr>
         <tr>
+            <th scope="row">3</th>
             <td>A3</td>
             <td>B3</td>
             <td>C3</td>
         </tr>
         <tr>
+            <th scope="row">4</th>
             <td>A4</td>
             <td>B4</td>
             <td>C4</td>
